@@ -5,6 +5,15 @@ const { SharpApiCoreService, SharpApiJobTypeEnum } = require('@sharpapi/sharpapi
  */
 class SharpApiGenerateKeywordsService extends SharpApiCoreService {
   /**
+   * Creates a new SharpApiGenerateKeywordsService instance
+   * @param {string} apiKey - Your SharpAPI API key
+   * @param {string} [apiBaseUrl='https://sharpapi.com/api/v1'] - API base URL
+   */
+  constructor(apiKey, apiBaseUrl = 'https://sharpapi.com/api/v1') {
+    super(apiKey, apiBaseUrl, '@sharpapi/sharpapi-node-generate-keywords/1.0.1');
+  }
+
+  /**
    * Generates a list of unique keywords/tags based on the provided content.
    *
    * @param {string} text
